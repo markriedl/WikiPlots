@@ -6,14 +6,23 @@ The *plots* file contains each story with one sentence per line. Each story is f
 
 ``
 Charley finds herself with her memory wiped and caught in one of the Celestial Toymaker's games
+
 To make matters worse, the Eighth Doctor has been turned into a ventriloquist's dummy as a part of the game and can only communicate to a limited degree with Charley
+
 <EOS>
+
 Venugopal (Ranga Rao) and Janaki (Devika) are a couple in love
+
 They soon have a baby boy, with much excitement
+
 During the boy's childhood, he contracts tuberculosis
+
 His family consults their doctor (Nagaiah) to obtain the best possible treatment for him and they decide to send him to Europe with a pilot (Nagesh)
+
 During their journey the pilot suffers a sudden heart attack, and the plane crashes in the desert
+
 The boy has to face several obstacles and finally survives to reunite with his family
+
 <EOS>
 ``
 
