@@ -1,18 +1,22 @@
 # WikiPlots
 
-This repository holds the WikiPlot dataset, containing 116,945 story plots extracted from English language [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). These stories are extracted from any English language article that contains a sub-header that contains the word "plot" (e.g., "Plot", "Plot Summary", etc.)
+The WikiPlots corpus is a collection of 112,936 story plots extracted from English language [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). These stories are extracted from any English language article that contains a sub-header that contains the word "plot" (e.g., "Plot", "Plot Summary", etc.).
 
-The *plots* file contains each story with one sentence per line. Each story is followed by <EOS> on a line by itself.
+This repository contains code and instructions for how to recreate the WikiPlots corpus.
 
-The *titles* file contains a list of articles in the story plots were found and extracted.
+The dataset itself can be downloaded from here: [*plots.zip*](https://gtvault-my.sharepoint.com/personal/mriedl3_gatech_edu/_layouts/15/guestaccess.aspx?docid=09511cca101bd45859859fe1765c7a84d&authkey=Af3ym3JQ-UIXbyKYwyEe0hU&expiration=2017-06-19T13%3a37%3a21.000Z). The zip file contains two files:
 
-## wikiPlots.py
+- *plots*: a text file containing all story plots. Each story plot is given with one sentence per line. Each story is followed by `<EOS>` on a line by itself.
+- *titles*: a text file containing a list of titles for each article in whih a story plot was found and extracted.
+
+## Using the code to recreate the corpus
 
 I have also included the Python script used to extract the story plots.
 
 wikiPlots.py requires:
 - An English Wikipedia dump
 - [Wikiextractor](https://github.com/attardi/wikiextractor)
+- The [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) library
 
 To use wikiPlots.py:
 
@@ -26,8 +30,9 @@ To use wikiPlots.py:
 
 You must run wikiextractor.py with these parameters. wikiPlots.py requires json files with nested html and with section header information preserved. Wikiextractor will produce a number of subfolders named "AA", "AB", "AC"... Within each folder will be a wiki_xx file containing a number of json records, one per article.
 
-4. Run wikiPlots.py as follows:
+4. [Install the BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup) python package
+5. Download and run wikiPlots.py from this repository:
 
     python wikiPlots.py wiki_dump_directory plot_file_name title_file_name
 
-`wiki_dump_director` should be the path to the directory containing the "AA", "AB", etc. folders. `plot_file_name` will be the name of the file that will contain the story plots. `title_file_name` will be the name of the file that will contain the list of story titles.
+`wiki_dump_directory` should be the path to the directory containing the "AA", "AB", etc. folders. `plot_file_name` will be the name of the file that will contain the story plots. `title_file_name` will be the name of the file that will contain the list of story titles.
