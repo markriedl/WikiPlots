@@ -25,7 +25,7 @@ To use wikiPlots.py:
 3. Download [wikiextractor](https://github.com/attardi/wikiextractor). You do not need to set it up. Run it as follows:
 
 
-    python wikiextractor.py -o output_directory --json --html -s enwiki-...xml
+python wikiextractor.py -o output_directory --json --html -s enwiki-...xml
 
 
 You must run wikiextractor.py with these parameters. wikiPlots.py requires json files with nested html and with section header information preserved. Wikiextractor will produce a number of subfolders named "AA", "AB", "AC"... Within each folder will be a wiki_xx file containing a number of json records, one per article.
@@ -33,6 +33,6 @@ You must run wikiextractor.py with these parameters. wikiPlots.py requires json 
 4. [Install the BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/bs4/doc/#installing-beautiful-soup) python package
 5. Download and run wikiPlots.py from this repository:
 
-    python wikiPlots.py wiki_dump_directory plot_file_name title_file_name
+python wikiPlots.py wiki_dump_directory plot_file_name title_file_name
 
 `wiki_dump_directory` should be the path to the directory containing the "AA", "AB", etc. folders. `plot_file_name` will be the name of the file that will contain the story plots. `title_file_name` will be the name of the file that will contain the list of story titles.
