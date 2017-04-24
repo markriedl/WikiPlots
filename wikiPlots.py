@@ -100,5 +100,5 @@ with open(outfilename, "w") as outfile:
 					# Write the sentences to the plot file
 					for s in sentences:
 						if len(s.strip()) > 0:
-							print >> outfile, s.strip().encode('utf-8')
+							print >> outfile, s.strip().encode('utf-8')+'.'
 					print >> outfile, "<EOS>"
