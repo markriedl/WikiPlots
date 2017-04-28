@@ -103,7 +103,7 @@ with open(outfilename, "w") as outfile:
 					plot = p2.sub(r'\1', plot)
 					# periods in numbers
 					p3 = re.compile('([0-9]+)\.([0-9]+)')
-					plot = p3.sub(r'\1,\2', plot)
+					plot = p3.sub(r'\1\2', plot)
 					# Break into sentences
 					sentences = re.split('[\?\.\!]', plot)
 					#print >> outfile, j['title'].encode('utf-8') #FOR DEBUGGING
