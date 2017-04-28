@@ -92,8 +92,18 @@ with open(outfilename, "w") as outfile:
 					plot = re.sub(' [L|l][T|t]\.', ' lt', plot)
 					plot = re.sub(' [G|g][O|o][V|v]\.', ' lt', plot)
 					plot = re.sub(' [C|c][P|p][T|t]\.', ' cpt', plot)
+					plot = re.sub(' [S|s][T|t]\.', ' st', plot)
 					plot = re.sub(' [A-Z|a-z]\.', '', plot) # remove single letter initials
 					plot = re.sub('\.\"', '\".', plot) # deal with periods in quotes
+					# Acroymns with periods are not fun. Need two steps to get rid of those periods.
+					# I don't think this is working quite right
+					p1 = re.compile('([A-Z|a-z])\.([)| |\"|\,])')
+					plot = p1.sub(r'\1\2', plot)
+					p2 = re.compile('\.([A-Z|a-z])')
+					plot = p2.sub(r'\1', plot)
+					# periods in numbers
+					p3 = re.compile('([0-9]+)\.([0-9]+)')
+					plot = p3.sub(r'\1,\2', plot)
 					# Break into sentences
 					sentences = re.split('[\?\.\!]', plot)
 					#print >> outfile, j['title'].encode('utf-8') #FOR DEBUGGING
