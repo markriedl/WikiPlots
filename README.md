@@ -4,7 +4,7 @@ The WikiPlots corpus is a collection of 112,936 story plots extracted from Engli
 
 This repository contains code and instructions for how to recreate the WikiPlots corpus.
 
-The dataset itself can be downloaded from here: [*plots.zip*](https://gtvault-my.sharepoint.com/personal/mriedl3_gatech_edu/_layouts/15/guestaccess.aspx?docid=09511cca101bd45859859fe1765c7a84d&authkey=Af3ym3JQ-UIXbyKYwyEe0hU&expiration=2017-06-19T13%3a37%3a21.000Z). The zip file contains two files:
+The dataset itself can be downloaded from here: [*plots.zip*](https://gtvault-my.sharepoint.com/personal/mriedl3_gatech_edu/_layouts/15/guestaccess.aspx?docid=0382d47427c5e4f88832dc36edadd9348&authkey=AZ1Y_p5W05mIyCmwC-89jL8&expiration=2017-06-30T16%3a54%3a53.000Z) (updated: 05/01/2017). The zip file contains two files:
 
 - *plots*: a text file containing all story plots. Each story plot is given with one sentence per line. Each story is followed by `<EOS>` on a line by itself.
 - *titles*: a text file containing a list of titles for each article in whih a story plot was found and extracted.
