@@ -86,9 +86,9 @@ with open(outfilename, "w") as outfile:
 					plot = re.sub(' [M|m]rs\.', ' mrs', plot)
 					plot = re.sub(' [M|m]s\.', ' ms', plot)
 					plot = re.sub(' [D|d]r\.', ' dr', plot)
-					plot = re.sub(' [M|m]d\.', ' md', plot)
-					plot = re.sub(' [P|p][H|h][D|d]\.', ' phd', plot)
-					plot = re.sub(' [E|e][S|s][Q|q]\.', ' esq', plot)
+					#plot = re.sub(' [M|m]d\.', ' md', plot)
+					#plot = re.sub(' [P|p][H|h][D|d]\.', ' phd', plot)
+					#plot = re.sub(' [E|e][S|s][Q|q]\.', ' esq', plot)
 					plot = re.sub(' [L|l][T|t]\.', ' lt', plot)
 					plot = re.sub(' [G|g][O|o][V|v]\.', ' lt', plot)
 					plot = re.sub(' [C|c][P|p][T|t]\.', ' cpt', plot)
@@ -97,7 +97,7 @@ with open(outfilename, "w") as outfile:
 					plot = re.sub('\.\"', '\".', plot) # deal with periods in quotes
 					# Acroymns with periods are not fun. Need two steps to get rid of those periods.
 					# I don't think this is working quite right
-					p1 = re.compile('([A-Z|a-z])\.([)| |\"|\,])')
+					p1 = re.compile('([A-Z|a-z])\.([)|\"|\,])')
 					plot = p1.sub(r'\1\2', plot)
 					p2 = re.compile('\.([A-Z|a-z])')
 					plot = p2.sub(r'\1', plot)
