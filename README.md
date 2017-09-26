@@ -20,7 +20,7 @@ wikiPlots.py requires:
 
 To use wikiPlots.py:
 
-1. Download an [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/). From this link you fill find a file named something like "enwiki-20170401-pages-articles-multistream.xml.bz2". Make sure you download the .bz2 file that is **not** the index file.
+1. Download an [English Wikipedia dump](https://dumps.wikimedia.org/enwiki/). From this link you will find a file named something like "enwiki-20170401-pages-articles-multistream.xml.bz2". Make sure you download the .bz2 file that is **not** the index file.
 2. Unzip the bz2 file to extract the .xml file.
 3. Download [wikiextractor](https://github.com/attardi/wikiextractor). You do not need to set it up. Run it as follows:
 
